@@ -4,7 +4,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class Register {
-    private List<Client> clients = new ArrayList<>();
+    private List<Client> clients;
 
     public Register(List<Client> clients) {
         this.clients = clients;
@@ -13,7 +13,7 @@ public class Register {
     public List<String> contactNamesForGoldClients(){
         return clients.stream()
                 .filter(client -> client.getServiceLevel() == ServiceLevel.GOLD)
-                .map(Client::getName)
+                .map(Client::getClientContactName)
                 .collect(Collectors.toList());
     }
 

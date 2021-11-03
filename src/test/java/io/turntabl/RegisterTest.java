@@ -22,7 +22,7 @@ public class RegisterTest {
 
     @Test
     public void testContactNamesForGoldClients(){
-        assertEquals(Arrays.asList("Stanbic Bank GH", "Kofi Accra"),register.contactNamesForGoldClients());
+        assertEquals(Arrays.asList("Sam", "Kofi Accra"),register.contactNamesForGoldClients());
     }
 
     @Test
